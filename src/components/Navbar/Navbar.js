@@ -5,21 +5,28 @@ import {faBars, faTimes, faSearch, faShieldAlt, faQuestionCircle, faMapMarkerAlt
 import Logo from '../../assets/lincolnlogo.png';
 import AmFlag from '../../assets/languageen.png';
 import './Navbar.css';
+import Dropdown from '../Dropdown/Dropdown';
 
 export default function Navbar() {
 
+    //event handlers
     let [navToggle, setNavToggle] = useState(false);
+    let [dropdownToggle, setDropdownToggle] = useState(false);
 
-    function handleClick() {
+    function handleNavClick() {
         setNavToggle(prevNavToggle => !prevNavToggle);
+    }
+
+    function handleDropdownClick() {
+        setDropdownToggle(prevDropdownToggle => !prevDropdownToggle);
     }
 
     return (
       <div className='container'>
         <div>
             <div className='nav-toggle' id='navToggle'>
-                <FontAwesomeIcon icon={faBars} className={navToggle ? 'hidden' : 'navIcon'} onClick={handleClick}/>
-                <FontAwesomeIcon icon={faTimes} className={navToggle ? 'navIcon' : 'hidden'} onClick={handleClick}/>
+                <FontAwesomeIcon icon={faBars} className={navToggle ? 'hidden' : 'navIcon'} onClick={handleNavClick}/>
+                <FontAwesomeIcon icon={faTimes} className={navToggle ? 'navIcon' : 'hidden'} onClick={handleNavClick}/>
             </div>   
         </div>
         <nav className={navToggle ? 'open' : 'closed'}>
@@ -33,13 +40,14 @@ export default function Navbar() {
             </ul>
             <ul className='nav'>
                 <li className='nav-item-title'><NavLink exact to={`/`}><img className='title' src={Logo} alt="Lincoln Electric Logo"/></NavLink></li>
-                <li className='nav-item'><NavLink to={`/solutions`} activeClassName='navActive'>SOLUTIONS</NavLink></li>
+                <li className='nav-item'><NavLink to={`/solutions`} activeClassName='navActive' onClick={handleDropdownClick}>SOLUTIONS</NavLink></li>
                 <li className='nav-item'><NavLink to={`/products`} activeClassName='navActive'>PRODUCTS</NavLink></li>
                 <li className='nav-item'><NavLink to={`/automation`} activeClassName='navActive'>AUTOMATION</NavLink></li>
                 <li className='nav-item'><NavLink to={`/education`} activeClassName='navActive'>EDUCATION</NavLink></li>
                 <li className='nav-item'><NavLink to={`/resources`} activeClassName='navActive'>RESOURCES</NavLink></li>
             </ul>
             <p className='nav-item-search'>Search <FontAwesomeIcon icon={faSearch} className={'search'}/></p>
+            {dropdownToggle ? <Dropdown /> : null}
         </nav>
       </div>
     );
