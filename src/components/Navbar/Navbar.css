@@ -1,16 +1,20 @@
  /*desktop navigation design*/
   /*primary (white) nav*/
-  .nav {
+  .nav, .secondary-nav {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .nav {
     align-items: flex-start;
     min-width: 100px;
     background-color: #FFF;
-    margin-top: 0;
-    margin-left: 30px;
-    margin-right: 30px;
     box-shadow: 0 4px 2px -2px #666666;
+    justify-content: flex-start;
   }
 
   .nav-item {
@@ -32,10 +36,9 @@
   .nav-item a {
     text-decoration: none;
     color: #181818;
-    font-weight: 600;
-    font-size: medium;
+    font-weight: 700;
+    font-size: 16px;
     padding: 20px 0px;
-    margin: 0px 20px;
   }
 
   .nav-item a:visited {
@@ -64,7 +67,7 @@
   
   .nav-item-search {
     float: right;
-    margin-top: -60px;
+    margin-top: -40px;
     margin-right: 60px;
   }
 
@@ -73,11 +76,30 @@
     width: auto;
   }
 
-  .nav-item-title {
-    margin: -50;
-    padding: -50;
+  .nav-item-title, .lang {
+    align-items: flex-start;
+    align-content: left;
+    justify-content: left;
+    margin-left: 0;
   }
   /*secondary (black) nav*/
+  .secondary-nav {
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: #000;
+  }
+
+  .secondary-nav-item {
+    text-decoration: none;
+    padding: 9px;
+    color: #fff;
+  }
+
+  .nav-item-title-sec {
+    margin-right: auto;
+    padding: 0;
+  }
+  
 
   /*mobile navigation design*/
   @media all and (max-width:1200px) {

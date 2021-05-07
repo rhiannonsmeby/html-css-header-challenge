@@ -3,6 +3,7 @@ import {NavLink} from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBars, faTimes, faSearch, faShieldAlt, faQuestionCircle, faMapMarkerAlt, faUserAlt, faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 import Logo from '../../assets/lincolnlogo.png';
+import AmFlag from '../../assets/languageen.png';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -23,11 +24,12 @@ export default function Navbar() {
         </div>
         <nav className={navToggle ? 'open' : 'closed'}>
             <ul className='secondary-nav'>
-                <li className='nav-item'><FontAwesomeIcon icon={faShieldAlt} className={'search'}/></li>
-                <li className='nav-item'><FontAwesomeIcon icon={faQuestionCircle} className={'search'}/></li>
-                <li className='nav-item'><FontAwesomeIcon icon={faMapMarkerAlt} className={'search'}/></li>
-                <li className='nav-item'><FontAwesomeIcon icon={faUserAlt} className={'search'}/></li>
-                <li className='nav-item'><FontAwesomeIcon icon={faShoppingCart} className={'search'}/></li>
+                <li className='nav-item-title-sec'><img classname='lang' src={AmFlag} alt="American Flag"/></li>
+                <li className='secondary-nav-item'><FontAwesomeIcon icon={faShieldAlt} className={'search'}/></li>
+                <li className='secondary-nav-item'><FontAwesomeIcon icon={faQuestionCircle} className={'search'}/></li>
+                <li className='secondary-nav-item'><FontAwesomeIcon icon={faMapMarkerAlt} className={'search'}/></li>
+                <li className='secondary-nav-item'><FontAwesomeIcon icon={faUserAlt} className={'search'}/></li>
+                <li className='secondary-nav-item' style={{'backgroundColor': '#B81830'}}><FontAwesomeIcon icon={faShoppingCart} className={'search'}/> 3</li>
             </ul>
             <ul className='nav'>
                 <li className='nav-item-title'><NavLink exact to={`/`}><img className='title' src={Logo} alt="Lincoln Electric Logo"/></NavLink></li>
