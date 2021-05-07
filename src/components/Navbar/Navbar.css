@@ -1,38 +1,32 @@
-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  h1 a {
-    margin: 0;
-    color: #39393A;
-    text-align: center;
-  }
-
-  .title {
-    font-size: 20px;
-    color: #39393A;
-    margin-bottom: 0;
-  }
-
-  .title a {
-    text-decoration: none;
-    color: #39393A;
-  }
-
-  .navigation {
+ /*desktop navigation design*/
+  /*primary (white) nav*/
+  .nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
-    min-width: 150px;
-    margin-top: 10px;
+    min-width: 100px;
+    background-color: #FFF;
+    margin-top: 0;
+    margin-left: 30px;
+    margin-right: 30px;
+    box-shadow: 0 4px 2px -2px #666666;
+  }
+
+  .nav-item {
+    text-decoration: none;
+    padding: 22px;
+    color: #39393A;
+  }
+
+  .navActive {
+    color: #B81830 !important;
+    border-bottom: 3px solid #B81830;
   }
 
   li {
-      list-style: none;
-      font-size: 14px;
+    list-style: none;
+    font-size: 14px;
   }
 
   .nav-item a {
@@ -40,43 +34,13 @@ nav {
     color: #181818;
     font-weight: 600;
     font-size: medium;
-    padding: 20px;
+    padding: 20px 0px;
+    margin: 0px 20px;
   }
 
   .nav-item a:visited {
     text-decoration: none;
     font-weight: 400;
-  }
-
-  .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    min-width: 100px;
-    background-color: #F4F4F4;
-    padding: 16px;
-  }
-
-  .nav-item {
-    text-decoration: none;
-    padding: 8px;
-    color: #39393A;
-  }
-
-  .nav a:visited {
-    text-decoration: none;
-    font-weight: 300;
-  }
-
-  .nav a {
-    padding: 8px 10px;
-    margin: 0px 8px;
-  }
-
-  .navActive {
-    color: #B81830 !important;
-    text-decoration: underline !important;
   }
 
   .nav-toggle {
@@ -97,8 +61,27 @@ nav {
   .navIcon {
     font-size: 30px;
   }
+  
+  .nav-item-search {
+    float: right;
+    margin-top: -60px;
+    margin-right: 60px;
+  }
 
-  @media all and (max-width:1000px) {
+  .title {
+    height: 50px;
+    width: auto;
+  }
+
+  .nav-item-title {
+    margin: -50;
+    padding: -50;
+  }
+  /*secondary (black) nav*/
+
+  /*mobile navigation design*/
+  @media all and (max-width:1200px) {
+    /*primary (white) nav*/
      .nav { 
         flex-direction: column;
         align-items: flex-start;
@@ -114,14 +97,12 @@ nav {
       li {
         display: block;
         text-align: center;
-        padding: 1.5rem 0;
-      }
-
-      ul {
         padding: 0;
       }
 
       .nav-toggle {
         display: block;
       }
+      
+      /*secondary (black) nav*/
   }
