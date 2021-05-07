@@ -1,0 +1,137 @@
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 a {
+    margin: 0;
+    color: #39393A;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 20px;
+    color: #39393A;
+    margin-bottom: 0;
+  }
+
+  .title a {
+    text-decoration: none;
+    color: #39393A;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-width: 150px;
+    margin-top: 10px;
+  }
+
+  li {
+      list-style: none;
+      font-size: 14px;
+  }
+
+  .nav-item a {
+    text-decoration: none;
+    color: #39393A;
+    font-weight: 400;
+  }
+
+  .nav-item a:visited {
+    text-decoration: none;
+    font-weight: 400;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-width: 100px;
+  }
+
+  .nav-item {
+    text-decoration: none;
+    font-size: 12px;
+    padding: 8px;
+    color: #39393A;
+  }
+
+  .nav a:visited {
+    text-decoration: none;
+    font-weight: 300;
+  }
+
+  .nav a {
+    padding: 8px 10px;
+    margin: 0px 8px;
+  }
+
+  .navActive {
+    color: #B81830 !important;
+    text-decoration: underline !important;
+  }
+
+  .nav-toggle {
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    display: none;
+  }
+
+  .open {
+    height: 100vh;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .navIcon {
+    font-size: 30px;
+  }
+
+  @media all and (min-width:800px) {
+    nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  @media all and (max-width:600px) {
+     .nav { 
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        height: 0;
+        width: 100%;
+        overflow: hidden;
+        transition: 250ms height ease-in-out;
+      }
+
+      li {
+        display: block;
+        text-align: center;
+        padding: 1.5rem 0;
+      }
+
+      li a {
+        font-size: 1.4rem;
+      }
+
+      ul {
+        padding: 0;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+  }
