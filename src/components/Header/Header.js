@@ -6,16 +6,6 @@ import {faBars, faTimes} from '@fortawesome/free-solid-svg-icons';
 export default function Header() {
     return (
         <header>
-            {/* <nav className="sub-nav">
-                <p>En</p>
-                <ul className="header-nav">
-                    <li>security icon?</li>
-                    <li>question icon</li>
-                    <li>location icon</li>
-                    <li>profile icon</li>
-                    <li>shopping cart icon</li>
-                </ul>
-            </nav> */}
             <nav className="main-nav">
                 <FontAwesomeIcon icon={faBars} /*className={navToggle ? 'hidden' : 'navIcon'} onClick={handleClick}**//>
                 <h1 className='title'>LINCOLN ELECTRIC</h1>

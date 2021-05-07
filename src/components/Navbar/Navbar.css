@@ -37,8 +37,10 @@ nav {
 
   .nav-item a {
     text-decoration: none;
-    color: #39393A;
-    font-weight: 400;
+    color: #181818;
+    font-weight: 600;
+    font-size: medium;
+    padding: 20px;
   }
 
   .nav-item a:visited {
@@ -52,11 +54,12 @@ nav {
     justify-content: flex-start;
     align-items: flex-start;
     min-width: 100px;
+    background-color: #F4F4F4;
+    padding: 16px;
   }
 
   .nav-item {
     text-decoration: none;
-    font-size: 12px;
     padding: 8px;
     color: #39393A;
   }
@@ -95,16 +98,7 @@ nav {
     font-size: 30px;
   }
 
-  @media all and (min-width:800px) {
-    nav {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-    }
-  }
-
-  @media all and (max-width:600px) {
+  @media all and (max-width:1000px) {
      .nav { 
         flex-direction: column;
         align-items: flex-start;
@@ -121,10 +115,6 @@ nav {
         display: block;
         text-align: center;
         padding: 1.5rem 0;
-      }
-
-      li a {
-        font-size: 1.4rem;
       }
 
       ul {
