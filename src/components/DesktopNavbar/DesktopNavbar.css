@@ -26,7 +26,7 @@
 
   .navActive {
     color: #B81830 !important;
-    border-bottom: 3px solid #B81830;
+    border-bottom: 3.5px solid #B81830;
   }
 
   li {
@@ -47,10 +47,17 @@
     font-weight: 400;
   }
 
-  .nav-toggle {
+  .nav-toggle-l {
     position: absolute;
     top: 1.5rem;
     right: 1rem;
+    display: none;
+  }
+
+  .nav-toggle-r {
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
     display: none;
   }
 
@@ -60,10 +67,6 @@
 
   .hidden {
     display: none;
-  }
-
-  .navIcon {
-    font-size: 30px;
   }
   
   .nav-item-search {
@@ -96,33 +99,4 @@
   .nav-item-title-sec {
     margin-right: auto;
     padding: 0;
-  }
-  
-
-  /*mobile navigation design*/
-  @media all and (max-width:1200px) {
-    /*primary (white) nav*/
-     .nav { 
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        height: 0;
-        width: 100%;
-        overflow: hidden;
-        transition: 250ms height ease-in-out;
-      }
-
-      li {
-        display: block;
-        text-align: center;
-        padding: 0;
-      }
-
-      .nav-toggle {
-        display: block;
-      }
-      
-      /*secondary (black) nav*/
   }

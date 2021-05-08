@@ -3,8 +3,8 @@ import './Dropdown.css';
 
 export default function Dropdown() {
     return (
-        <div className='dropdown'>
-            <ul>
+        <div className='dropdown-container'>
+            <ul className='dropdown'>
                 <li className="dropdownli">Soultions By Industry</li>
                 <li className="dropdownli">Solutions By Process</li>
                 <li className="dropdownli">Software Solutions</li>

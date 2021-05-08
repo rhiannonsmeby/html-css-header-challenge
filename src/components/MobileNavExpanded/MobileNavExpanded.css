@@ -1,0 +1,13 @@
+@media all and (max-width:1050px) {
+    .nav-mobile-title {
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+        margin-bottom: 0;
+        min-width: 100px;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+}

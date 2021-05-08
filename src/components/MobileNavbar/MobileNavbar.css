@@ -1,0 +1,36 @@
+/*mobile navigation design*/
+@media all and (max-width:1050px) {
+      li {
+        display: block;
+        text-align: center;
+      }
+
+      .nav-toggle-l {
+        display: block;
+      }
+      
+      .nav-toggle-r {
+        display: block;
+      }
+
+      .nav-mobile {
+        background-color: #fff;
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+        margin-bottom: 0;
+        min-width: 100px;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+
+      .nav-item-mobile {
+        padding-right: 10px;
+        padding-bottom: 16px;
+        color: #000;
+        font-size: 20px;
+        align-items: center;
+      }
+      
+      /*secondary (black) nav*/
+  }

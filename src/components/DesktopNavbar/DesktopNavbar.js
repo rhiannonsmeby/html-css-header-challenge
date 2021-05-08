@@ -1,21 +1,16 @@
 import React, {useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faBars, faTimes, faSearch, faShieldAlt, faQuestionCircle, faMapMarkerAlt, faUserAlt, faShoppingCart} from '@fortawesome/free-solid-svg-icons';
+import {faSearch, faShieldAlt, faQuestionCircle, faMapMarkerAlt, faUserAlt, faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 import Logo from '../../assets/lincolnlogo.png';
 import AmFlag from '../../assets/languageen.png';
-import './Navbar.css';
+import './DesktopNavbar.css';
 import Dropdown from '../Dropdown/Dropdown';
 
-export default function Navbar() {
+export default function DesktopNavbar() {
 
-    //event handlers
-    let [navToggle, setNavToggle] = useState(false);
+    //event handler for dropdown menu
     let [dropdownToggle, setDropdownToggle] = useState(false);
-
-    function handleNavClick() {
-        setNavToggle(prevNavToggle => !prevNavToggle);
-    }
 
     function handleDropdownClick() {
         setDropdownToggle(prevDropdownToggle => !prevDropdownToggle);
@@ -23,15 +18,9 @@ export default function Navbar() {
 
     return (
       <div className='container'>
-        <div>
-            <div className='nav-toggle' id='navToggle'>
-                <FontAwesomeIcon icon={faBars} className={navToggle ? 'hidden' : 'navIcon'} onClick={handleNavClick}/>
-                <FontAwesomeIcon icon={faTimes} className={navToggle ? 'navIcon' : 'hidden'} onClick={handleNavClick}/>
-            </div>   
-        </div>
-        <nav className={navToggle ? 'open' : 'closed'}>
+        <nav>
             <ul className='secondary-nav'>
-                <li className='nav-item-title-sec'><img classname='lang' src={AmFlag} alt="American Flag"/></li>
+                <li className='nav-item-title-sec'><img className='lang' src={AmFlag} alt="American Flag"/></li>
                 <li className='secondary-nav-item'><FontAwesomeIcon icon={faShieldAlt} className={'search'}/></li>
                 <li className='secondary-nav-item'><FontAwesomeIcon icon={faQuestionCircle} className={'search'}/></li>
                 <li className='secondary-nav-item'><FontAwesomeIcon icon={faMapMarkerAlt} className={'search'}/></li>

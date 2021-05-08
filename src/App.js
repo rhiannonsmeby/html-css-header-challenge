@@ -1,11 +1,12 @@
 import './App.css';
-// import Header from './components/Header/Header';
-import Navbar from './components/Navbar/Navbar';
+import Header from './components/Header/Header';
+//import DesktopNavbar from './components/DesktopNavbar/DesktopNavbar'
+
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <Header />
     </div>
   );
 }
