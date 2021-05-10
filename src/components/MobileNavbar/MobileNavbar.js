@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {NavLink} from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faBars, faTimes, faSearch, faShieldAlt, faQuestionCircle, faMapMarkerAlt, faUserAlt, faShoppingCart} from '@fortawesome/free-solid-svg-icons';
+import {faSearch, faUserAlt, faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 import './MobileNavbar.css';
 import Logo from '../../assets/lincolnlogo.png';
-import AmFlag from '../../assets/languageen.png';
 
 export default function MobileNavbar() {
     return (

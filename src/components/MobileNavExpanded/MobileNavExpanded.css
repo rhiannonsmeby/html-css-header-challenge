@@ -1,6 +1,7 @@
-@media all and (max-width:1050px) {
+@media all and (max-width:1000px) {
+    /*Title/ heading for expanded mobile nav*/
     .nav-mobile-title {
-        background-color: #000;
+        background-color: #181818;
         color: #fff;
         display: flex;
         flex-direction: row;
@@ -10,4 +11,60 @@
         align-items: flex-end;
         justify-content: flex-end;
       }
+
+      /*primary nav in the expanded mobile view*/
+      .nav-mobile-expanded {
+        background-color: #fff;
+        margin-top: 0;
+      }
+
+      .nav-item-expanded {
+        border-bottom: 1.55px solid #D0d0d0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        background-color: #fff;
+        padding-left: 10px;
+    }
+
+    .nav-item-expanded a {
+        text-decoration: none;
+        color: #181818;
+        font-weight: bold;
+    }
+
+    .p-nav {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .span-menu {
+        position: absolute;
+        right: 1rem;
+    }
+
+    .nav-ex {
+        background-color: #f4f4f4;
+        height: 100vh;
+    }
+
+    /*secondary nav in the expanded mobile view*/
+    .secondary-nav-expanded {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: -20px;
+    }
+
+    .secondary-nav-item-expanded {
+        padding: 12px;
+        padding-left: 0px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .img-ex {
+        height: 16px;
+        width: auto;
+    }
 }

@@ -4,7 +4,7 @@ import MobileNav from '../MobileNav/MobileNav';
 
 export default function Header() {
     let [width, setWidth] = useState(window.innerWidth);
-    const breakpoint = 1050;
+    const breakpoint = 1000;
 
     //event handler for whether to display mobile or desktop navigation
     useEffect(() => {

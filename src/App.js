@@ -1,12 +1,12 @@
 import './App.css';
+import {Route} from 'react-router';
 import Header from './components/Header/Header';
-//import DesktopNavbar from './components/DesktopNavbar/DesktopNavbar'
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
+       <Route path="/" component={Header} />
     </div>
   );
 }

@@ -36,7 +36,7 @@ export default function DesktopNavbar() {
                 <li className='nav-item'><NavLink to={`/resources`} activeClassName='navActive'>RESOURCES</NavLink></li>
             </ul>
             <p className='nav-item-search'>Search <FontAwesomeIcon icon={faSearch} className={'search'}/></p>
-            {dropdownToggle ? <Dropdown /> : null}
+            {dropdownToggle ? <Dropdown dropdownToggle={handleDropdownClick}/> : null}
         </nav>
       </div>
     );

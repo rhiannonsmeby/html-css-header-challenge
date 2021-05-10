@@ -5,10 +5,14 @@
 
 .nav-item-hamburger {
     padding-right: 10px;
-    color: #000;
+    color: #181818;
     font-size: 24px;
     align-items: center;
   }
+
+.navIcon {
+    color: #181818;
+}
 
 .navIconClose {
     color: #fff;
